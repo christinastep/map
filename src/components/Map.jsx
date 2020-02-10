@@ -7,10 +7,12 @@ import {STATIONS} from '../data/stations';
 class Map extends React.Component {
   constructor(props) {
     super(props);
+   
     this.handlerGareChange = this.handlerGareChange.bind(this);
     this.state = {
     };
   }
+
 
   handlerGareChange(gareName) {
     this.props.onGareChange(gareName);
@@ -21,11 +23,18 @@ class Map extends React.Component {
   
 
   componentDidMount() {
+    this.getGareId()
+  }
+
+  getGareId(){
     let circles = document.querySelectorAll("circle");
+    console.log("function child");
+    console.log(circles);
   
     for (let j = 0; j < circles.length; j++) {
-  
+      
       let circle = circles[j];
+      
       circle.setAttribute('r', "8" );
       let _this=this;
       circle.addEventListener("mouseenter", function(){
@@ -47,6 +56,10 @@ class Map extends React.Component {
       });
 
     }
+  }
+
+  getAlert() {
+    this.getGareId()
   }
 
 

@@ -11,6 +11,7 @@ import {getStation} from '../functions/hoverStation';
 class Main extends React.Component {
   constructor(props) {
     super(props);
+    this.child = React.createRef();
     this.state = {
       selectedGare:"",
       selectedJOSite: "Sport",
@@ -29,8 +30,11 @@ class Main extends React.Component {
       { selectedJOSite }
     );  
 
-    setTimeout(function(){
-      getStation()
+    // setTimeout(function(){
+    //   getStation()
+    // }, 3000);
+    setTimeout(() => {
+      this.child.current.getAlert();
     }, 3000);
     
   };
@@ -53,6 +57,7 @@ class Main extends React.Component {
         
 
         <Map 
+        ref={this.child} 
         selectedGare={this.state.selectedGare}
         onGareChange={this.handlerGareChange}
         //onSiteChange={this.handlerSiteChange}

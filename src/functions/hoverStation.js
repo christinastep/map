@@ -21,7 +21,7 @@ export function getStation() {
         for (let i = 0; i < STATIONS[0].length; i++) {
           let station = STATIONS[0][i];
           if(station.fields.gares_id == selectedStationId){   
-            _this.handlerGareChange(station.fields.nom_gare);  
+           // _this.handlerGareChange(station.fields.nom_gare);  
           }
         }
       });
