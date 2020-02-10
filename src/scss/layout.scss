@@ -1,0 +1,18 @@
+.container--wrapper{
+  width:100vw;
+  display: flex;
+}
+
+.container--map{
+  width:80%;
+}
+.container--sidebar{
+  width:20%;
+}
+
+.container--filter{
+  position: absolute;
+  top:0;
+  left:0;
+  width: 200px;
+}
