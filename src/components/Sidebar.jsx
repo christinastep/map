@@ -9,13 +9,18 @@ class Sidebar extends React.Component {
 
 
   render() {
+    const selectedZoom = this.props.selectedZoom;
+    //
     const selectedGare = this.props.selectedGare;
     const selectedJOSite = this.props.selectedJOSite.label;
     return (
       <div className="container--sidebar">
-      <h1>{selectedJOSite}</h1>
-      <hr></hr>
-      <h1>{selectedGare}</h1>
+       
+          <div>
+            <h1>{selectedJOSite}</h1>
+            <h1>{selectedGare}</h1>
+          </div>
+        
       </div>
     );
   }

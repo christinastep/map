@@ -1,65 +1,40 @@
-*{
-  font-size: 20px;
-  line-height: 24px;
-  box-sizing:border-box;
-}
 
 
-body{
-  height:100vh;
-  width:100vw;
-  padding: 0;
-  margin: 0;
-  font-size: 20px;
-  font-family: sans-serif;
-  background-color: red;
-}
-.wrapper{
-  height:100%;
-  padding: 0;
-  margin: 0;
-  overflow:hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: pink;
-  .wrapperSvg{
-    width:100vw;
-    height:100vh;
-    overflow:scroll;
-    svg{
-      position: relative;
-      transition:all 1s;
-     
-    }
-    &.sued svg{
-      //transform:scale(1.5) translateY(-25%) ;
-      width:150%;
-      top:-60%;
-      left:50%;
-    }
-    &.nord svg{
-      //transform:scale(1.5) translateY(25%) ;
-      width:150%;
-      top:0%;
-    }
-     &.west svg{
-      //transform: scale(1.5) translateX(25%);
-      width:150%;
-      left:-60%;
-    }
-    &.ost svg{
-      width:150%;
-      left:0;
-      //transform:scale(1.5) translateX(-25%);
-      
-    }
-    &.center svg{
-      //transform:scale(1) translateX(0) ;
-      width:100%;
-    }
+.wrapperSvg{
+  //width:100vw;
+  //height:100vh;
+  overflow:scroll;
+  svg{
+    position: relative;
+    transition:all 1s;
+    
   }
-
+  &.sued svg{
+    //transform:scale(1.5) translateY(-25%) ;
+    width:150%;
+    top:-60%;
+    left:50%;
+  }
+  &.nord svg{
+    //transform:scale(1.5) translateY(25%) ;
+    width:150%;
+    top:0%;
+  }
+    &.west svg{
+    //transform: scale(1.5) translateX(25%);
+    width:150%;
+    left:-60%;
+  }
+  &.ost svg{
+    width:150%;
+    left:0;
+    //transform:scale(1.5) translateX(-25%);
+    
+  }
+  &.center svg{
+    //transform:scale(1) translateX(0) ;
+    width:100%;
+  }
 }
 
 svg{
@@ -69,14 +44,14 @@ svg{
   .linie{fill:none;stroke-width:6px;stroke-miterlimit:10;stroke:#1d1d1b}
   circle{fill:#fff;stroke:#1d1d1b;stroke-width:2px;transition:all 0.1s}
   
-  /*.siteOlympique{
+  .siteOlympique{
+    position: relative;
     animation:siteAnimation 0.5s infinite alternate;
     @keyframes siteAnimation{
-      0%{fill:#fff;}
+      0%{fill:#fff;;}
       100%{fill:black;}
     }
-    
-  }*/
+  }
   .hoverLine{
     stroke:#fff;
   }
@@ -85,60 +60,6 @@ svg{
   }
 }
 
-.infoBox{
-  position: absolute;
-  z-index: 10;
-  
-  right:2vw;
-  width:30vw;
-  background-color: #fff;
-  border-radius:10px;
-  padding:10px 20px;
-  &--sport{
-    display: none;
-    bottom:2vh;
-    span{
-      font-weight: bold;
-    }
-    .span--selectedLine{
-      text-transform: uppercase;
-    }
-    .span--selectedSite{
-      text-decoration: none;
-    }
-    
-  }
-  &--station{
-    top:2vh;
-    display: none;
-    
-  }
-
-  .flex{display: flex;align-content: center;}
-  h1{
-    position: relative;
-    display: block;  
-    box-sizing:border-box;
-    border-bottom:solid 2px black;
-    width:100%;
-  }
-  .text--resau{
-    line-height: 20px;
-    vertical-align:center;
-    display: block;
-    margin-top: 5px;
-  }
-  .text--numero{
-    border:solid 3px black;
-    border-radius:50%;
-    width:30px;
-    height:30px;
-    text-align: center;
-    line-height: 26px;
-    display: block;
-    margin-left: 10px;
-  }
-}
 
 .zoom{
   position: fixed;
@@ -160,11 +81,10 @@ svg{
 .parking{
   fill:red;
 }
-.container--wrapper{
-}
+
 
 .container--map{
-  position: relative;
+  //position: relative;
   .wrapperSvg{
     width:100%;
   }
@@ -183,8 +103,35 @@ svg{
   }
 }
 
-.container--filter{
-  z-index: 6;
-  pointer-events: auto;
+.map--bgImage{
+  width: 97%;
+  padding-left: 13%;
+  padding-top: 5%;
 }
+
+.filter--zoom{
+  position: fixed;
+  bottom:0;
+  right:0;
+  z-index: 10;
+  button{
+    background: #fff;
+  }
+}
+
+
+.zoomWrapper{
+  width:100%;
+  position: relative;
+}
+
+
+
+.rer--wrapper{
+  display: flex;
+  border:solid 1px grey;
+  border-radius: 10;
+}
+
+
 

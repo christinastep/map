@@ -1,0 +1,18 @@
+.container--filter{
+  z-index: 6;
+  pointer-events: auto;
+  width:36vw;
+  height:90vh;
+  top:5vh;
+  left:2vw;
+  background-color: #fff;
+  border-radius: 30px;
+  padding:4vw;
+
+  .filterBox{
+    margin-bottom: 3vw;
+  }
+}
+
+
+
